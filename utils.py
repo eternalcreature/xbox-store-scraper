@@ -170,8 +170,9 @@ class LogBook:
                 break
         else:
             with open(self.file_path, "a") as a:
-                a.write(f"Added the entry for {title}.\n\n")
-                # Ensure the new_section only contains the desired section_name key
+                log = f"Added the entry for {title}.\n\n"
+                print(log)
+                a.write(log)
                 self.updated_games.append(title)
                 documents.append(metadata)
 
