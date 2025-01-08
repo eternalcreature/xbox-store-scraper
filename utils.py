@@ -156,8 +156,8 @@ class LogBook:
                 if differences[1]:
                     if has_non_empty_list(differences[1]):
                         changes = yaml.dump(differences[1], default_flow_style=False)
-                        log = f"""Updated the entry for '{title}' with following changes: 
-        {changes}\n\n"""
+                        log = f"""\nUpdated the entry for '{title}' with following changes: 
+        {changes}\n"""
                         print(log)
                         with open(self.file_path, "a") as f:
                             f.write(log)
